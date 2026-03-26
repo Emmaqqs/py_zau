@@ -28,12 +28,12 @@ label_numero_ingresado.pack(pady=5)
 
 label_valor_absoluto = tk.Label(frame_resultados, text="", font=("Arial", 11))
 label_valor_absoluto.pack(pady=5)
-
+afafdfadfd
 label_tipo_numero = tk.Label(frame_resultados, text="", font=("Arial", 11))
-label_tipo_numero.pack(pady=5)
-
+label_tipo_numero.pack(pady=5)ffadafda
+fddfadfaafd
 def analizar_numero():
-    try:
+    try:fdadafdaf
         texto = entrada_numero.get()
         
         if texto == "":
@@ -71,7 +71,7 @@ def limpiar():
 
 frame_botones = tk.Frame(ventana)
 frame_botones.pack(pady=20)
-
+ksfdnllnkfsdnsffsnf
 boton_analizar = tk.Button(frame_botones, text="Analizar", command=analizar_numero, 
                             font=("Arial", 12), padx=20, pady=10)
 boton_analizar.pack(side=tk.LEFT, padx=10)
