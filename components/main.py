@@ -1,6 +1,6 @@
 from calculadora import Calculadora
-a=10
-b=3
+a=25
+b=10
 print(Calculadora.restar(a,b))
 print(Calculadora.sumar(a,b))
 print(Calculadora.multiplicar(a,b))
