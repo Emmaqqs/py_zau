@@ -2,7 +2,7 @@ import threading
 import time
 # Tarea 1
 def contar_numeros():
-    for i in range(1, 6):
+    for i in range(1, 7):
         print(f"Número: {i}")
         time.sleep(1)
 # Tarea 2
