@@ -1,0 +1,6 @@
+print("Que la chupe Ebner pinche pendejo puto")
+print("Que la chupe Ebner pinche pendejo puto")
+print("Que la chupe Ebner pinche pendejo puto")
+print("Que la chupe Ebner pinche pendejo puto")
+print("Que la chupe Ebner pinche pendejo puto")
+print("Que la chupe Ebner pinche pendejo puto")
