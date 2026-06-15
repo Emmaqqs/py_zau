@@ -28,6 +28,8 @@ def mostrar_libro(libro):
     print(f"Autor: {libro['autor']}")
     print(f"Año: {libro['anio']}")
     print(f"Precio: ${libro['precio']:.2f}")
+    print(f"Editorial: {libro['editorial']}")
+    print(f"ISBN: {libro['isbn']}")
     print("-" * 35)
 
 # ------------------------------------------------------------
@@ -43,6 +45,14 @@ def crear_libro(coleccion):
     if not autor:
         print("❌ El autor es obligatorio")
         return
+    editorial = input("Editorial: ").strip()
+    if not editorial:
+        print("❌ La editorial es obligatoria")
+        return
+    isbn = input("ISBN: ").strip()
+    if not isbn:
+        print("❌ El ISBN es obligatorio")
+        return
     
     try:
         anio = int(input("Año: "))
@@ -54,6 +64,8 @@ def crear_libro(coleccion):
     libro = {
         "titulo": titulo,
         "autor": autor,
+        "editorial": editorial,
+        "isbn": isbn,
         "anio": anio,
         "precio": precio
     }
@@ -99,6 +111,8 @@ def actualizar_libro(coleccion):
         print("Deje en blanco para mantener el valor actual.")
         titulo = input(f"Nuevo título [{libro['titulo']}]: ").strip()
         autor = input(f"Nuevo autor [{libro['autor']}]: ").strip()
+        editorial = input(f"Nueva editorial [{libro['editorial']}]: ").strip()
+        isbn = input(f"Nuevo ISBN [{libro['isbn']}]: ").strip()
         
         anio = libro['anio']
         anio_str = input(f"Nuevo año [{libro['anio']}]: ").strip()
@@ -121,6 +135,10 @@ def actualizar_libro(coleccion):
             actualizacion["$set"]["titulo"] = titulo
         if autor:
             actualizacion["$set"]["autor"] = autor
+        if editorial:
+            actualizacion["$set"]["editorial"] = editorial
+        if isbn:
+            actualizacion["$set"]["isbn"] = isbn
         if anio_str and anio != libro['anio']:
             actualizacion["$set"]["anio"] = anio
         if precio_str and precio != libro['precio']:

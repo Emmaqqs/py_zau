@@ -19,6 +19,8 @@ def crear_libro():
 
     titulo = input("Título: ")
     autor = input("Autor: ")
+    editorial = input("Editorial: ")
+    isbn = input("ISBN: ")
     anio = int(input("Año: "))
     precio = float(input("Precio: "))
 
@@ -26,6 +28,8 @@ def crear_libro():
     libro = {
         "titulo": titulo,
         "autor": autor,
+        "editorial": editorial,
+        "isbn": isbn,
         "anio": anio,
         "precio": precio
     }
@@ -49,6 +53,8 @@ def listar_libros():
         print("ID:", libro["_id"])
         print("Título:", libro["titulo"])
         print("Autor:", libro["autor"])
+        print("Editorial:", libro["editorial"])
+        print("ISBN:", libro["isbn"])
         print("Año:", libro["anio"])
         print("Precio:", libro["precio"])
         print("-" * 30)
@@ -75,6 +81,8 @@ def buscar_libro():
         print("ID:", libro["_id"])
         print("Título:", libro["titulo"])
         print("Autor:", libro["autor"])
+        print("Editorial:", libro["editorial"])
+        print("ISBN:", libro["isbn"])
         print("Año:", libro["anio"])
         print("Precio:", libro["precio"])
     else:
@@ -100,6 +108,8 @@ def actualizar_libro():
 
     nuevo_titulo = input("Nuevo título: ")
     nuevo_autor = input("Nuevo autor: ")
+    nueva_editorial = input("Nueva editorial: ")
+    nuevo_isbn = input("Nuevo ISBN: ")
     nuevo_anio = int(input("Nuevo año: "))
     nuevo_precio = float(input("Nuevo precio: "))
 
@@ -109,6 +119,8 @@ def actualizar_libro():
             "$set": {
                 "titulo": nuevo_titulo,
                 "autor": nuevo_autor,
+                "editorial": nueva_editorial,
+                "isbn": nuevo_isbn,
                 "anio": nuevo_anio,
                 "precio": nuevo_precio
             }
